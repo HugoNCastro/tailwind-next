@@ -8,7 +8,7 @@ export function Profile() {
                 className="h-10 w-10 rounded-full"
                 alt=""
             />
-            <div className="flex flex-col flex-1 truncate">
+            <div className="flex flex-col truncate">
                 <span className="text-sm font-semibold text-zinc-700">Hugo Castro</span>
                 <span className="text-sm text-zinc-500 truncate">hnc@tech.com</span>
             </div>

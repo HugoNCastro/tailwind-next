@@ -1,10 +1,11 @@
 import { SettingsTabs } from "@/components/SettingsTabs";
 
-import { Mail } from "lucide-react";
+import { Bold, Italic, Link, List, ListOrdered, Mail } from "lucide-react";
 import * as FileInput from '@/components/Form/FileInput'
-import * as Input from '@/components/Input'
 import { Select } from "@/components/Form/Select";
 import { SelectItem } from "@/components/Form/Select/SelectIem";
+import { TextArea } from "@/components/Form/Textarea";
+import * as Input from '@/components/Form/CustomInput'
 
 export default function Home() {
   return (
@@ -100,8 +101,8 @@ export default function Home() {
             </label>
 
             <Select placeholder="Select a country...">
-              <SelectItem text="Brazil" value="br"/>
-              <SelectItem text="United States" value="us"/>
+              <SelectItem text="Brazil" value="br" />
+              <SelectItem text="United States" value="us" />
             </Select>
 
           </div>
@@ -114,8 +115,8 @@ export default function Home() {
               Timezone
             </label>
             <Select placeholder="Select a timezone...">
-              <SelectItem text="Pacific Standard Time (UTC-08:00)" value="pacific"/>
-              <SelectItem text="America São Paulo (UTC-03:00)" value="america"/>
+              <SelectItem text="Pacific Standard Time (UTC-08:00)" value="pacific" />
+              <SelectItem text="America São Paulo (UTC-03:00)" value="america" />
             </Select>
           </div>
 
@@ -132,7 +133,37 @@ export default function Home() {
 
             </label>
 
-            <div></div>
+            <div className="space-y-3">
+              <div className="grid gap-3 grid-cols-2">
+                <Select placeholder="" defaultValue="normal">
+                  <SelectItem text="Normal text" defaultChecked value="normal" />
+                  <SelectItem text="Markdown" defaultChecked value="md" />
+                </Select>
+
+                <div className="flex items-center gap-1">
+                  <button type="button" className="p-2 hover:bg-zinc-50 rounded-md">
+                    <Bold className="w-4 h-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button type="button" className="p-2 hover:bg-zinc-50 rounded-md">
+                    <Italic className="w-4 h-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button type="button" className="p-2 hover:bg-zinc-50 rounded-md">
+                    <Link className="w-4 h-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button type="button" className="p-2 hover:bg-zinc-50 rounded-md">
+                    <List className="w-4 h-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button type="button" className="p-2 hover:bg-zinc-50 rounded-md">
+                    <ListOrdered className="w-4 h-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                </div>
+              </div>
+
+              <TextArea
+                id="bio"
+                defaultValue={"I'm a Software Developer Base in Brasília, Brazil. I specialize in frontend..."}
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">

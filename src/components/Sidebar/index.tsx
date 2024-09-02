@@ -3,7 +3,7 @@ import { BarChart, CheckSquare, Cog, Flag, Home, LifeBuoy, Search, SquareStack, 
 import { NavItem } from './NavItem'
 import { UsedSpaceWidget } from './UsedSpaceWidget'
 import { Profile } from './Profile'
-import * as Input from '../input'
+import * as Input from '../Form/CustomInput'
 
 export function Sidebar() {
   return (

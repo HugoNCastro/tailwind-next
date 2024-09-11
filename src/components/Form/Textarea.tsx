@@ -5,7 +5,7 @@ export interface TextAreaProps extends ComponentProps<'textarea'> {}
 export function TextArea(props: TextAreaProps) {
   return (
     <textarea
-      className="min-h-[120px] resize-y w-full rounded-lg border border-zinc-300 px-3 py-2 shadow-sm"
+      className="min-h-[120px] resize-y w-full rounded-lg border border-zinc-300 px-3 py-2 shadow-sm outline-none ocus-within:border-violet-300 focus-within:ring-violet-100 focus-within:ring-4"
       {...props}
     />
   )
